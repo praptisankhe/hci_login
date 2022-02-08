@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/register', function (req, res) {
-    res.render("register",{errors:[]});
+    res.render("register",{err:[]});
   });
 
   let pass_arr={};
