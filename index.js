@@ -81,7 +81,8 @@ app.get('/register', function (req, res) {
               res.send("Login Successful");
             }
             else{
-                alert("Login Failed");
+                // alert("Login Failed");
+                res.render("/",{t:1});
                 // res.send("Login Failed");
             }
         }
