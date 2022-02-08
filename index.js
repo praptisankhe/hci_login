@@ -48,14 +48,16 @@ app.get('/register', function (req, res) {
   
     if (password !== password2) {
       errors.push({ message: "Passwords do not match" });
+
     }
     if(pass_arr.hasOwnProperty(email))
     {
       errors.push({ message: "User name already exists" });          
     }
-  
+    
     if (errors.length > 0) {
-      res.render("register", { errors, name,gender,college_name,age,phone_no, email, password, password2 });
+        console.log("i am in nodeeeey");
+        res.render("register", { err:errors});
     } else {
       hashedPassword = await bcrypt.hash(password, 10);
       pass_arr[email]=hashedPassword;
