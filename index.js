@@ -11,7 +11,7 @@ app.use( express.static( "./views" ) );
 
 
 app.get('/', function (req, res) {
-  res.render("login");
+  res.render("login",{t:0});
 });
 
 app.get('/register', function (req, res) {
@@ -66,6 +66,7 @@ app.get('/register', function (req, res) {
     }
     
   });
+  
   app.post(
     "/login",async (req, res) =>{
       e=req.body.email;
