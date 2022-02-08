@@ -83,7 +83,7 @@ app.get('/register', function (req, res) {
             }
             else{
                 // alert("Login Failed");
-                res.render("/",{t:1});
+                res.render("login",{t:1});
                 // res.send("Login Failed");
             }
         }
