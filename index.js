@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/register', function (req, res) {
-    res.render("register");
+    res.render("register",{errors:[]});
   });
 
   let pass_arr={};
@@ -91,7 +91,9 @@ app.get('/register', function (req, res) {
 
     }
     else{
-        res.send("User does not exists");
+        // res.send("User does not exists");
+        
+        res.render("login",{t:1});
     }
     
 }
