@@ -24,13 +24,11 @@ app.get('/register', function (req, res) {
     let { name,gender,age,email, password, password2 } = req.body;
   
     let phone_no=req.body.phoneno;
-    let college_name=req.body.collegename;
     let errors = [];
   
     console.log({
       name,
       gender,
-      college_name,
       age,
       phone_no,
       email,
@@ -38,7 +36,7 @@ app.get('/register', function (req, res) {
       password2
     });
   
-    if (!name ||!gender|| !college_name|| !age || !phone_no || !email || !password || !password2) {
+    if (!name ||!gender|| !age || !phone_no || !email || !password || !password2) {
       errors.push({ message: "Please enter all fields" });
     }
   
