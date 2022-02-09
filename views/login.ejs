@@ -15,8 +15,10 @@
   -moz-box-shadow: -1px 4px 6px 11px rgba(0,0,0,0.75);
   box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75); */
             }
+    
                   </style> 
-      
+
+                  
   </head>
 
 
@@ -71,13 +73,10 @@
               required
               style="margin-left: 5px;"
             />
-    
+            <input type="checkbox" onclick="myFunction()">         Show Password
+         
               </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox"> Remember Me
-                </label>
-              </div>
+              
               <div style="margin-top: 15px;">
                 <button type="submit" class="btn btn-outline-primary ">Login</button>
     
@@ -100,5 +99,19 @@
     if(op==1){
       alert("Login Failed");
     }
+    function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+
+
+
+
+    
   </script>
 </html>
