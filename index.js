@@ -37,20 +37,20 @@ app.get('/register', function (req, res) {
     });
   
     if (!name ||!gender|| !age || !phone_no || !email || !password || !password2) {
-      errors.push({ message: "Please enter all fields" });
+      errors.push("Please enter all fields" );
     }
   
     if (password.length < 6) {
-      errors.push({ message: "Password must be a least 6 characters long" });
+      errors.push("Password must be a least 6 characters long" );
     }
   
     if (password !== password2) {
-      errors.push({ message: "Passwords do not match" });
+      errors.push("Passwords do not match");
 
     }
     if(pass_arr.hasOwnProperty(email))
     {
-      errors.push({ message: "User name already exists" });          
+      errors.push("User name already exists");          
     }
     
     if (errors.length > 0) {
